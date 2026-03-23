@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adam Skoneczny — B2B Sales Strategist for Tech Companies</title>
+  <meta name="description" content="Adam Skoneczny helps Asian IT and tech companies build repeatable sales pipelines to break into EU and US markets. Founder of EVIT Organization.">
+  <meta property="og:title" content="Adam Skoneczny — B2B Sales Strategist">
+  <meta property="og:description" content="Helping Asian IT companies build sales engines for EU/US market expansion.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adamskoneczny.com">
+  <link rel="canonical" href="https://adamskoneczny.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy-900: #0a0f1e;
+      --navy-800: #0f1629;
+      --navy-700: #141d38;
+      --navy-600: #1a2747;
+      --blue-500: #2563eb;
+      --blue-400: #3b82f6;
+      --blue-300: #60a5fa;
+      --blue-200: #93c5fd;
+      --gold-400: #c9a84c;
+      --gold-300: #d4b85c;
+      --white: #ffffff;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--navy-900);
+      color: var(--gray-200);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.2; }
+
+    a { color: var(--blue-300); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--blue-200); }
+
+    img { max-width: 100%; display: block; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-60px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(60px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.3); }
+      50% { box-shadow: 0 0 40px rgba(37, 99, 235, 0.6); }
+    }
+
+    @keyframes gradient-shift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .animate-on-scroll.slide-left {
+      transform: translateX(-60px);
+    }
+    .animate-on-scroll.slide-left.visible {
+      transform: translateX(0);
+    }
+
+    .animate-on-scroll.slide-right {
+      transform: translateX(60px);
+    }
+    .animate-on-scroll.slide-right.visible {
+      transform: translateX(0);
+    }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: all 0.4s ease;
+      background: transparent;
+    }
+
+    nav.scrolled {
+      background: rgba(10, 15, 30, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 12px 0;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+
+    .nav-logo span { color: var(--gold-400); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--gray-300);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold-400);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--blue-500), var(--blue-400));
+      color: var(--white) !important;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    }
+
+    .nav-cta::after { display: none; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 2px;
+      background: var(--white);
+      transition: all 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 80px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(201, 168, 76, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 100%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+    }
+
+    /* Floating orbs */
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .hero-orb-1 {
+      width: 400px;
+      height: 400px;
+      background: rgba(37, 99, 235, 0.12);
+      top: -100px;
+      right: -100px;
+      animation-delay: 0s;
+    }
+
+    .hero-orb-2 {
+      width: 300px;
+      height: 300px;
+      background: rgba(201, 168, 76, 0.08);
+      bottom: -50px;
+      left: -50px;
+      animation-delay: -4s;
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content { animation: slideInLeft 1s ease 0.2s both; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(37, 99, 235, 0.1);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--blue-300);
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--blue-400);
+      border-radius: 50%;
+      animation: pulse-glow 2s infinite;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.8rem);
+      color: var(--white);
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+
+    .hero h1 .gradient-text {
+      background: linear-gradient(135deg, var(--blue-300), var(--gold-400));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-description {
+      font-size: 1.15rem;
+      color: var(--gray-400);
+      margin-bottom: 40px;
+      max-width: 520px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, var(--blue-500), #1d4ed8);
+      color: var(--white);
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(37, 99, 235, 0.4);
+      color: var(--white);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: transparent;
+      color: var(--gray-200);
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--blue-400);
+      color: var(--white);
+      background: rgba(37, 99, 235, 0.08);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .hero-stat-label {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      margin-top: 4px;
+    }
+
+    .hero-image {
+      animation: slideInRight 1s ease 0.4s both;
+      position: relative;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .hero-image-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 60%, var(--navy-900));
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 16px;
+    }
+
+    .hero-image-frame {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      bottom: 40px;
+      left: 40px;
+      border: 2px solid rgba(201, 168, 76, 0.2);
+      border-radius: 16px;
+      z-index: -1;
+    }
+
+    /* ===== SECTION STYLING ===== */
+    section { padding: 100px 0; position: relative; }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--blue-300);
+      margin-bottom: 16px;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 30px;
+      height: 2px;
+      background: var(--gold-400);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--gray-400);
+      max-width: 600px;
+      line-height: 1.8;
+    }
+
+    /* ===== ABOUT ===== */
+    .about { background: var(--navy-800); }
+
+    .about .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-image-wrapper {
+      position: relative;
+    }
+
+    .about-image-wrapper img {
+      border-radius: 12px;
+      height: 550px;
+      object-fit: cover;
+      object-position: top center;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .about-image-accent {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 200px;
+      height: 200px;
+      border: 2px solid var(--gold-400);
+      border-radius: 12px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      color: var(--gray-300);
+      font-size: 1.05rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .about-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+      background: rgba(37, 99, 235, 0.06);
+      border-radius: 10px;
+      border: 1px solid rgba(37, 99, 235, 0.1);
+    }
+
+    .about-highlight-icon {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: linear-gradient(135deg, var(--blue-500), var(--blue-400));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .about-highlight h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .about-highlight p {
+      font-size: 0.85rem;
+      color: var(--gray-400);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ===== SERVICES ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .service-card {
+      background: var(--navy-800);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 40px 32px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue-500), var(--gold-400));
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(37, 99, 235, 0.2);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(37, 99, 235, 0.05));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+    }
+
+    .service-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .service-card p {
+      color: var(--gray-400);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* ===== RESULTS/TESTIMONIALS ===== */
+    .results { background: var(--navy-800); }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .result-card {
+      background: linear-gradient(135deg, var(--navy-700), var(--navy-900));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 36px;
+      position: relative;
+    }
+
+    .result-card .quote-mark {
+      font-size: 4rem;
+      font-family: 'Playfair Display', serif;
+      color: var(--blue-500);
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .result-card p {
+      font-size: 1rem;
+      color: var(--gray-300);
+      font-style: italic;
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .result-card-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .result-card-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-500), var(--gold-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+
+    .result-card-name {
+      font-weight: 600;
+      color: var(--white);
+      font-size: 0.95rem;
+    }
+
+    .result-card-role {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+    }
+
+    /* ===== METHODOLOGY ===== */
+    .methodology-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .methodology-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .methodology-step {
+      display: flex;
+      gap: 20px;
+      padding: 24px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      transition: all 0.3s;
+    }
+
+    .methodology-step:hover {
+      background: rgba(37, 99, 235, 0.06);
+      border-color: rgba(37, 99, 235, 0.15);
+    }
+
+    .methodology-step-number {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      background: linear-gradient(135deg, var(--blue-500), #1d4ed8);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--white);
+      font-size: 1.1rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .methodology-step h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .methodology-step p {
+      font-size: 0.9rem;
+      color: var(--gray-400);
+    }
+
+    .methodology-image img {
+      border-radius: 12px;
+      height: 500px;
+      object-fit: cover;
+      object-position: top center;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ===== BLOG PREVIEW ===== */
+    .blog { background: var(--navy-800); }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .blog-card {
+      background: var(--navy-900);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.4s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .blog-card-image {
+      height: 200px;
+      background: linear-gradient(135deg, var(--navy-700), var(--navy-600));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      opacity: 0.5;
+    }
+
+    .blog-card-body { padding: 28px; }
+
+    .blog-card-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--blue-300);
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .blog-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .blog-card p {
+      color: var(--gray-400);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      padding: 120px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at center, rgba(37, 99, 235, 0.15) 0%, transparent 60%);
+    }
+
+    .cta-section .container { position: relative; z-index: 2; }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      font-size: 1.15rem;
+      color: var(--gray-400);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact { background: var(--navy-800); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 60px;
+    }
+
+    .contact-info { display: flex; flex-direction: column; gap: 32px; }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .contact-item-icon {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      background: rgba(37, 99, 235, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .contact-item h4 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    .contact-item p {
+      color: var(--gray-400);
+      font-size: 0.95rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+
+    .form-group label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--gray-300);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      background: var(--navy-900);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 14px 18px;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--blue-500);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 140px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      padding: 60px 0 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .footer-logo span { color: var(--gold-400); }
+
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-social a {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      color: var(--gray-400);
+      transition: all 0.3s;
+      font-size: 1.1rem;
+    }
+
+    .footer-social a:hover {
+      background: var(--blue-500);
+      color: var(--white);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--gray-500);
+      font-size: 0.85rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero .container,
+      .about .container,
+      .methodology-content,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-image { order: -1; }
+      .hero-image-wrapper img { height: 400px; }
+      .hero-image-frame { display: none; }
+
+      .services-grid,
+      .results-grid,
+      .blog-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-image-wrapper img { height: 400px; }
+      .methodology-image { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 15, 30, 0.98);
+        padding: 20px 24px;
+        gap: 16px;
+      }
+
+      .hero { padding: 100px 0 60px; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-stats { gap: 24px; }
+      .hero-stat-number { font-size: 1.5rem; }
+
+      .services-grid,
+      .results-grid,
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-highlights { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+
+      section { padding: 70px 0; }
+
+      .footer-content { flex-direction: column; gap: 24px; }
+    }
+
+    /* ===== PARTICLE CANVAS ===== */
+    #particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ===== SCHEMA MARKUP HIDDEN ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Particle Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">Adam<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#methodology">Process</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#blog">Insights</a></li>
+        <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          B2B Sales Strategist
+        </div>
+        <h1>
+          Helping Tech Companies<br>
+          <span class="gradient-text">Break Into New Markets</span>
+        </h1>
+        <p class="hero-description">
+          I help IT and tech founders in Asia build the sales engine they are missing, so they can sell internationally with a repeatable, scalable process.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">
+            Book a Call
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#methodology" class="btn-secondary">
+            See How It Works
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-number">7+</div>
+            <div class="hero-stat-label">Years in B2B Sales Consulting</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">30+</div>
+            <div class="hero-stat-label">Tech Companies Advised</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">5</div>
+            <div class="hero-stat-label">Countries Served</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-wrapper">
+          <img src="https://lh3.googleusercontent.com/d/1BxIL-gD8LpAXhUVCrh4VUOXNMh4GSH0A=s1200" alt="Adam Skoneczny — B2B Sales Strategist" loading="eager">
+        </div>
+        <div class="hero-image-frame"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-image-wrapper animate-on-scroll slide-left">
+        <img src="https://lh3.googleusercontent.com/d/1YWbg_hHhQFdI8Adj6wwlJoE54wSj4AYH=s1200" alt="Adam Skoneczny portrait" loading="lazy">
+        <div class="about-image-accent"></div>
+      </div>
+      <div class="animate-on-scroll slide-right">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Polish Roots. Global Perspective.<br>Based in Vietnam.</h2>
+        <div class="about-text">
+          <p>I left Poland at 19, built a corporate career in Ireland, and walked away from it to move to Asia. That was over ten years ago.</p>
+          <p>Working with technology companies across APAC, Europe and the US, I kept seeing the same pattern: brilliant engineers building great products with no idea how to sell them internationally.</p>
+          <p>That is the gap I decided, together with my team at EVIT, to close. I am passionate about helping B2B tech companies build the revenue engine they are missing — sales process, positioning, pipeline, go-to-market — so they can turn technical excellence into international business.</p>
+        </div>
+        <div class="about-highlights">
+          <div class="about-highlight">
+            <div class="about-highlight-icon">&#127758;</div>
+            <div>
+              <h4>Cross-Cultural Expertise</h4>
+              <p>Lived and worked across Europe, Ireland, and Southeast Asia</p>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-icon">&#128200;</div>
+            <div>
+              <h4>STRAIGHT SPIN Method</h4>
+              <p>Proprietary B2B sales methodology built for tech companies</p>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-icon">&#127919;</div>
+            <div>
+              <h4>Pipeline Guarantee</h4>
+              <p>Results-backed engagements with qualified pipeline targets</p>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-icon">&#128101;</div>
+            <div>
+              <h4>Founder of EVIT</h4>
+              <p>Bridging Asian tech talent with Western market opportunities</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center; margin-bottom: 20px;">
+        <div class="section-label" style="justify-content: center;">What I Do</div>
+        <h2 class="section-title">Your Growth, Engineered</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">I do not just advise. I help you build a complete, repeatable sales system designed for international expansion.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">&#128640;</div>
+          <h3>Go-to-Market Strategy</h3>
+          <p>Identify your ideal customers in EU/US markets, craft your positioning, and build a market entry roadmap that gives your team clarity and direction from day one.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">&#127993;</div>
+          <h3>Outbound Sales Engine</h3>
+          <p>Build a repeatable lead generation machine — LinkedIn outreach, email sequences, qualification frameworks — so you never rely on referrals alone again.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">&#128218;</div>
+          <h3>Sales Process Design</h3>
+          <p>Design the complete sales workflow from first touch to close: discovery calls, proposals, objection handling, all documented and trainable.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">&#127891;</div>
+          <h3>Team Training & Coaching</h3>
+          <p>Train your sales and marketing team using the STRAIGHT SPIN methodology, with weekly coaching calls and live deal reviews to accelerate their performance.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">&#128176;</div>
+          <h3>Pipeline Management</h3>
+          <p>Set up CRM, dashboards, and reporting systems so you always know where your deals stand and what actions will move the needle this week.</p>
+        </div>
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">&#127760;</div>
+          <h3>Brand & Authority Building</h3>
+          <p>Build your founder brand and company authority through LinkedIn content strategy, case studies, and thought leadership that attracts inbound interest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section class="methodology" id="methodology">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <div class="section-label" style="justify-content: center;">The Process</div>
+        <h2 class="section-title">How We Work Together</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">A structured, proven approach that takes your company from relying on referrals to having a predictable international sales pipeline.</p>
+      </div>
+      <div class="methodology-content">
+        <div class="methodology-steps">
+          <div class="methodology-step animate-on-scroll">
+            <div class="methodology-step-number">1</div>
+            <div>
+              <h4>Discovery & Assessment</h4>
+              <p>We map your current situation — team, product, market, pipeline, blockers. No assumptions, only facts.</p>
+            </div>
+          </div>
+          <div class="methodology-step animate-on-scroll">
+            <div class="methodology-step-number">2</div>
+            <div>
+              <h4>Master Plan & Setup</h4>
+              <p>You receive a complete sales strategy — ICP definition, messaging, outreach scripts, process maps, and KPI targets.</p>
+            </div>
+          </div>
+          <div class="methodology-step animate-on-scroll">
+            <div class="methodology-step-number">3</div>
+            <div>
+              <h4>Build & Execute</h4>
+              <p>We build your outbound engine together — LinkedIn campaigns, email sequences, CRM setup, team training.</p>
+            </div>
+          </div>
+          <div class="methodology-step animate-on-scroll">
+            <div class="methodology-step-number">4</div>
+            <div>
+              <h4>Optimize & Scale</h4>
+              <p>Weekly reviews, data-driven adjustments, deal coaching. We iterate until the system runs predictably without me.</p>
+            </div>
+          </div>
+        </div>
+        <div class="methodology-image animate-on-scroll slide-right">
+          <img src="https://lh3.googleusercontent.com/d/11Xt2yaELnT8-F33brD7WGoYeF57iDCUU=s1200" alt="Adam Skoneczny consulting" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="results" id="results">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <div class="section-label" style="justify-content: center;">Client Results</div>
+        <h2 class="section-title">What Founders Say</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">I work closely with tech founders who need to build their sales capability from scratch. Here is how they describe the experience.</p>
+      </div>
+      <div class="results-grid">
+        <div class="result-card animate-on-scroll">
+          <div class="quote-mark">"</div>
+          <p>Adam gave us a complete sales system we never had. Within 3 months we had our first EU client and a pipeline we could actually manage and forecast.</p>
+          <div class="result-card-author">
+            <div class="result-card-avatar">GM</div>
+            <div>
+              <div class="result-card-name">GMO Corporation Subsidiary</div>
+              <div class="result-card-role">IT Services, Japan/Vietnam</div>
+            </div>
+          </div>
+        </div>
+        <div class="result-card animate-on-scroll">
+          <div class="quote-mark">"</div>
+          <p>We were great at engineering but had zero sales process. Adam helped us build outbound from scratch and within weeks we started booking real meetings with decision makers.</p>
+          <div class="result-card-author">
+            <div class="result-card-avatar">TF</div>
+            <div>
+              <div class="result-card-name">Tech Founder</div>
+              <div class="result-card-role">IT Services, Vietnam</div>
+            </div>
+          </div>
+        </div>
+        <div class="result-card animate-on-scroll">
+          <div class="quote-mark">"</div>
+          <p>The cross-cultural understanding Adam brings is unique. He understands both sides of the table, which made the whole expansion process feel natural instead of forced.</p>
+          <div class="result-card-author">
+            <div class="result-card-avatar">CE</div>
+            <div>
+              <div class="result-card-name">CEO, IT Company</div>
+              <div class="result-card-role">Software Development, APAC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="blog" id="blog">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center;">
+        <div class="section-label" style="justify-content: center;">Insights</div>
+        <h2 class="section-title">Latest Thinking</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Practical insights on B2B sales, international expansion, and building revenue engines for tech companies.</p>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-card-image">&#128214;</div>
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Sales Strategy</span>
+            <h3>Why Your IT Company Stops Growing After Referrals Run Out</h3>
+            <p>Most tech founders exhaust their personal network within 2-3 years. Here is what to build instead of hoping for the next warm intro.</p>
+          </div>
+        </div>
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-card-image">&#127758;</div>
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Market Expansion</span>
+            <h3>The 5 Mistakes Asian IT Companies Make When Entering EU Markets</h3>
+            <p>After working with dozens of tech companies expanding West, these are the patterns that consistently slow them down.</p>
+          </div>
+        </div>
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-card-image">&#128161;</div>
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Outbound</span>
+            <h3>How to Book 10 Discovery Calls Per Month With Cold Outreach</h3>
+            <p>A practical framework for tech companies that want to stop waiting for leads and start creating their own pipeline.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <div class="section-label" style="justify-content: center;">Ready to grow?</div>
+        <h2>Let's Build Your Sales Engine</h2>
+        <p>If you are a tech founder looking to break into new markets with a structured, results-driven approach — I would like to hear from you.</p>
+        <a href="#contact" class="btn-primary" style="font-size: 1.1rem; padding: 18px 40px;">
+          Schedule a Discovery Call
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="animate-on-scroll" style="text-align: center; margin-bottom: 20px;">
+        <div class="section-label" style="justify-content: center;">Get in Touch</div>
+        <h2 class="section-title">Start the Conversation</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Tell me about your company and your growth goals. I will get back to you within 24 hours.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info animate-on-scroll slide-left">
+          <div class="contact-item">
+            <div class="contact-item-icon">&#9993;</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:aps@evit-org.com">aps@evit-org.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128101;</div>
+            <div>
+              <h4>LinkedIn</h4>
+              <p><a href="https://www.linkedin.com/in/adam-skoneczny/" target="_blank" rel="noopener">linkedin.com/in/adam-skoneczny</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#127760;</div>
+            <div>
+              <h4>EVIT Organization</h4>
+              <p><a href="https://evit-org.com" target="_blank" rel="noopener">evit-org.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#127909;</div>
+            <div>
+              <h4>YouTube</h4>
+              <p><a href="https://www.youtube.com/@goglobalasia" target="_blank" rel="noopener">Go Global Asia</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128205;</div>
+            <div>
+              <h4>Location</h4>
+              <p>Ho Chi Minh City, Vietnam</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form animate-on-scroll slide-right" action="https://formsubmit.co/aps@evit-org.com" method="POST">
+          <input type="hidden" name="_subject" value="New inquiry from adamskoneczny.com">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@company.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="company">Company & Role</label>
+            <input type="text" id="company" name="company" placeholder="Acme Tech — CEO">
+          </div>
+          <div class="form-group">
+            <label for="message">How can I help?</label>
+            <textarea id="message" name="message" placeholder="Tell me about your company, team size, and what you are looking to achieve..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+            Send Message
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">Adam Skoneczny<span>.</span></div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/adam-skoneczny/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@goglobalasia" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/goglobalasia1" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Adam Skoneczny. All rights reserved. | Founder of <a href="https://evit-org.com" target="_blank">EVIT Organization</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Adam Skoneczny",
+    "jobTitle": "B2B Sales Strategist & Executive Chairman",
+    "url": "https://adamskoneczny.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/adam-skoneczny/",
+      "https://www.youtube.com/@goglobalasia",
+      "https://www.facebook.com/goglobalasia1"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "EVIT Organization",
+      "url": "https://evit-org.com"
+    },
+    "description": "Adam Skoneczny helps Asian IT and tech companies build repeatable B2B sales pipelines to break into EU and US markets. Founder of EVIT Organization, based in Vietnam.",
+    "knowsAbout": ["B2B Sales", "Sales Consulting", "International Market Expansion", "Lead Generation", "Sales Process Design"],
+    "nationality": "Polish",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ho Chi Minh City",
+      "addressCountry": "VN"
+    }
+  }
+  </script>
+
+  <!-- Scripts -->
+  <script>
+    // === NAVBAR SCROLL ===
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // === MOBILE MENU ===
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('active');
+      });
+    });
+
+    // === SCROLL ANIMATIONS ===
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // === PARTICLE BACKGROUND ===
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let animationId;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    function createParticles() {
+      particles = [];
+      const count = Math.min(60, Math.floor(window.innerWidth / 25));
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          size: Math.random() * 2 + 0.5,
+          opacity: Math.random() * 0.5 + 0.1
+        });
+      }
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach((p, i) => {
+        // Move
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0) p.x = canvas.width;
+        if (p.x > canvas.width) p.x = 0;
+        if (p.y < 0) p.y = canvas.height;
+        if (p.y > canvas.height) p.y = 0;
+
+        // Draw dot
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(59, 130, 246, ${p.opacity})`;
+        ctx.fill();
+
+        // Draw connections
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = p.x - particles[j].x;
+          const dy = p.y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 150) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.06 * (1 - dist / 150)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      });
+
+      animationId = requestAnimationFrame(drawParticles);
+    }
+
+    resizeCanvas();
+    createParticles();
+    drawParticles();
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      createParticles();
+    });
+
+    // === SMOOTH SCROLL FOR ANCHOR LINKS ===
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // === IMAGE FALLBACK ===
+    document.querySelectorAll('img').forEach(img => {
+      img.addEventListener('error', function() {
+        this.style.display = 'none';
+        const parent = this.parentElement;
+        if (parent) {
+          parent.style.background = 'linear-gradient(135deg, #141d38, #1a2747)';
+          parent.style.minHeight = '400px';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
