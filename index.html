@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adam Skoneczny — B2B Sales Strategist for Tech Companies</title>
+  <title>Adam Skoneczny â B2B Sales Strategist for Tech Companies</title>
   <meta name="description" content="Adam Skoneczny helps Asian IT and tech companies build repeatable sales pipelines to break into EU and US markets. Founder of EVIT Organization.">
-  <meta property="og:title" content="Adam Skoneczny — B2B Sales Strategist">
+  <meta property="og:title" content="Adam Skoneczny â B2B Sales Strategist">
   <meta property="og:description" content="Helping Asian IT companies build sales engines for EU/US market expansion.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://adamskoneczny.com">
@@ -90,6 +90,42 @@
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
+    }
+
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink-cursor {
+      0%, 100% { border-right-color: var(--gold-400); }
+      50% { border-right-color: transparent; }
+    }
+
+    @keyframes counter-pop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    @keyframes ripple-out {
+      0% { transform: scale(0); opacity: 0.6; }
+      100% { transform: scale(4); opacity: 0; }
+    }
+
+    @keyframes slide-up-stagger {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow-pulse {
+      0%, 100% { text-shadow: 0 0 20px rgba(201,168,76,0.3); }
+      50% { text-shadow: 0 0 40px rgba(201,168,76,0.7), 0 0 80px rgba(201,168,76,0.3); }
     }
 
     .animate-on-scroll {
@@ -303,9 +339,11 @@
     }
 
     .hero h1 .gradient-text {
-      background: linear-gradient(135deg, var(--blue-300), var(--gold-400));
+      background: linear-gradient(135deg, var(--blue-300) 0%, var(--gold-400) 50%, var(--blue-300) 100%);
+      background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      animation: shimmer 4s linear infinite, glow-pulse 3s ease-in-out infinite;
       background-clip: text;
     }
 
@@ -332,6 +370,8 @@
       color: var(--white);
       border-radius: 8px;
       font-weight: 600;
+      position: relative;
+      overflow: hidden;
       font-size: 1rem;
       transition: all 0.3s;
       border: none;
@@ -340,8 +380,17 @@
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 35px rgba(37, 99, 235, 0.4);
+      box-shadow: 0 12px 35px rgba(37, 99, 235, 0.5);
       color: var(--white);
+    }
+
+    .btn-primary .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      transform: scale(0);
+      animation: ripple-out 0.6s linear;
+      pointer-events: none;
     }
 
     .btn-secondary {
@@ -377,6 +426,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       font-weight: 700;
+      transition: transform 0.3s ease;
       color: var(--white);
     }
 
@@ -404,6 +454,16 @@
       background: linear-gradient(to bottom, transparent 60%, var(--navy-900));
       z-index: 1;
       pointer-events: none;
+    }
+
+    .hero-image-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,15,30,0.45) 0%, rgba(37,99,235,0.1) 100%);
+      border-radius: 16px;
+      pointer-events: none;
+      z-index: 1;
     }
 
     .hero-image-wrapper img {
@@ -472,6 +532,16 @@
 
     .about-image-wrapper {
       position: relative;
+    }
+
+    .about-image-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(10,15,30,0.5) 100%);
+      border-radius: 12px;
+      pointer-events: none;
+      z-index: 1;
     }
 
     .about-image-wrapper img {
@@ -575,12 +645,35 @@
     }
 
     .service-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(37, 99, 235, 0.2);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      transform: translateY(-10px) scale(1.01);
+      border-color: rgba(37, 99, 235, 0.4);
+      box-shadow: 0 20px 60px rgba(37, 99, 235, 0.2), 0 0 0 1px rgba(37,99,235,0.15);
     }
 
     .service-card:hover::before { opacity: 1; }
+
+    /* Mouse-tracking glow spot */
+    .service-card .card-glow {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .service-card:hover .card-glow { opacity: 1; }
+
+    /* Stagger delays for service cards */
+    .service-card:nth-child(1) { transition-delay: 0.05s; }
+    .service-card:nth-child(2) { transition-delay: 0.1s; }
+    .service-card:nth-child(3) { transition-delay: 0.15s; }
+    .service-card:nth-child(4) { transition-delay: 0.2s; }
+    .service-card:nth-child(5) { transition-delay: 0.25s; }
+    .service-card:nth-child(6) { transition-delay: 0.3s;
+}
 
     .service-icon {
       width: 56px;
@@ -729,6 +822,20 @@
     .methodology-step p {
       font-size: 0.9rem;
       color: var(--gray-400);
+    }
+
+    .methodology-image {
+      position: relative;
+    }
+
+    .methodology-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,15,30,0.5) 0%, rgba(37,99,235,0.15) 100%);
+      border-radius: 12px;
+      pointer-events: none;
+      z-index: 1;
     }
 
     .methodology-image img {
@@ -1116,7 +1223,7 @@
       </div>
       <div class="hero-image">
         <div class="hero-image-wrapper">
-          <img src="https://lh3.googleusercontent.com/d/1BxIL-gD8LpAXhUVCrh4VUOXNMh4GSH0A=s1200" alt="Adam Skoneczny — B2B Sales Strategist" loading="eager">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=900&h=600&fit=crop&q=90" alt="Adam Skoneczny â B2B Sales Strategist" loading="eager">
         </div>
         <div class="hero-image-frame"></div>
       </div>
@@ -1127,7 +1234,7 @@
   <section class="about" id="about">
     <div class="container">
       <div class="about-image-wrapper animate-on-scroll slide-left">
-        <img src="https://lh3.googleusercontent.com/d/1YWbg_hHhQFdI8Adj6wwlJoE54wSj4AYH=s1200" alt="Adam Skoneczny portrait" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=550&fit=crop&q=90" alt="Adam Skoneczny portrait" loading="lazy">
         <div class="about-image-accent"></div>
       </div>
       <div class="animate-on-scroll slide-right">
@@ -1136,7 +1243,7 @@
         <div class="about-text">
           <p>I left Poland at 19, built a corporate career in Ireland, and walked away from it to move to Asia. That was over ten years ago.</p>
           <p>Working with technology companies across APAC, Europe and the US, I kept seeing the same pattern: brilliant engineers building great products with no idea how to sell them internationally.</p>
-          <p>That is the gap I decided, together with my team at EVIT, to close. I am passionate about helping B2B tech companies build the revenue engine they are missing — sales process, positioning, pipeline, go-to-market — so they can turn technical excellence into international business.</p>
+          <p>That is the gap I decided, together with my team at EVIT, to close. I am passionate about helping B2B tech companies build the revenue engine they are missing â sales process, positioning, pipeline, go-to-market â so they can turn technical excellence into international business.</p>
         </div>
         <div class="about-highlights">
           <div class="about-highlight">
@@ -1189,12 +1296,12 @@
         <div class="service-card animate-on-scroll">
           <div class="service-icon">&#127993;</div>
           <h3>Outbound Sales Engine</h3>
-          <p>Build a repeatable lead generation machine — LinkedIn outreach, email sequences, qualification frameworks — so you never rely on referrals alone again.</p>
+          <p>Build a repeatable lead generation machine â LinkedIn outreach, email sequences, qualification frameworks â so you never rely on referrals alone again.</p>
         </div>
         <div class="service-card animate-on-scroll">
           <div class="service-icon">&#128218;</div>
           <h3>Sales Process Design</h3>
-          <p>Design the complete sales workflow from first touch to close: discovery calls, proposals, objection handling, all documented and trainable.</p>
+          <p>Design the complete sales workflow from first touch to close: discovery calls, proposals, follow-ups, objection handling, all documented and trainable.</p>
         </div>
         <div class="service-card animate-on-scroll">
           <div class="service-icon">&#127891;</div>
@@ -1229,21 +1336,21 @@
             <div class="methodology-step-number">1</div>
             <div>
               <h4>Discovery & Assessment</h4>
-              <p>We map your current situation — team, product, market, pipeline, blockers. No assumptions, only facts.</p>
+              <p>We map your current situation â team, product, market, pipeline, blockers. No assumptions, only facts.</p>
             </div>
           </div>
           <div class="methodology-step animate-on-scroll">
             <div class="methodology-step-number">2</div>
             <div>
               <h4>Master Plan & Setup</h4>
-              <p>You receive a complete sales strategy — ICP definition, messaging, outreach scripts, process maps, and KPI targets.</p>
+              <p>You receive a complete sales strategy â ICP definition, messaging, outreach scripts, process maps, and KPI targets.</p>
             </div>
           </div>
           <div class="methodology-step animate-on-scroll">
             <div class="methodology-step-number">3</div>
             <div>
               <h4>Build & Execute</h4>
-              <p>We build your outbound engine together — LinkedIn campaigns, email sequences, CRM setup, team training.</p>
+              <p>We build your outbound engine together â LinkedIn campaigns, email sequences, CRM setup, team training.</p>
             </div>
           </div>
           <div class="methodology-step animate-on-scroll">
@@ -1255,7 +1362,7 @@
           </div>
         </div>
         <div class="methodology-image animate-on-scroll slide-right">
-          <img src="https://lh3.googleusercontent.com/d/11Xt2yaELnT8-F33brD7WGoYeF57iDCUU=s1200" alt="Adam Skoneczny consulting" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=550&fit=crop&q=90" alt="Adam Skoneczny consulting" loading="lazy">
         </div>
       </div>
     </div>
@@ -1350,7 +1457,7 @@
       <div class="animate-on-scroll">
         <div class="section-label" style="justify-content: center;">Ready to grow?</div>
         <h2>Let's Build Your Sales Engine</h2>
-        <p>If you are a tech founder looking to break into new markets with a structured, results-driven approach — I would like to hear from you.</p>
+        <p>If you are a tech founder looking to break into new markets with a structured, results-driven approach â I would like to hear from you.</p>
         <a href="#contact" class="btn-primary" style="font-size: 1.1rem; padding: 18px 40px;">
           Schedule a Discovery Call
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1420,7 +1527,7 @@
           </div>
           <div class="form-group">
             <label for="company">Company & Role</label>
-            <input type="text" id="company" name="company" placeholder="Acme Tech — CEO">
+            <input type="text" id="company" name="company" placeholder="Acme Tech â CEO">
           </div>
           <div class="form-group">
             <label for="message">How can I help?</label>
@@ -1611,6 +1718,190 @@
           parent.style.minHeight = '400px';
         }
       });
+    });
+
+    // === COUNTER ANIMATION FOR HERO STATS ===
+    function animateCounter(el, target, suffix, duration = 1800) {
+      let start = 0;
+      const startTime = performance.now();
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease-out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(eased * target);
+        el.textContent = current + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+        else {
+          el.textContent = target + suffix;
+          el.style.animation = 'counter-pop 0.3s ease';
+        }
+      }
+      requestAnimationFrame(update);
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statNumbers = entry.target.querySelectorAll('.hero-stat-number');
+          const targets = [7, 30, 5];
+          const suffixes = ['+', '+', ''];
+          statNumbers.forEach((el, i) => {
+            setTimeout(() => animateCounter(el, targets[i], suffixes[i]), i * 200);
+          });
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const statsSection = document.querySelector('.hero-stats');
+    if (statsSection) statsObserver.observe(statsSection);
+
+    // === TYPEWRITER EFFECT ON HERO GRADIENT TEXT ===
+    const gradientText = document.querySelector('.hero h1 .gradient-text');
+    if (gradientText) {
+      const fullText = gradientText.textContent;
+      gradientText.textContent = '';
+      gradientText.style.display = 'inline-block';
+      gradientText.style.borderRight = '2px solid var(--gold-400)';
+      gradientText.style.animation = 'blink-cursor 0.7s step-end infinite, shimmer 4s linear infinite, glow-pulse 3s ease-in-out infinite';
+      let i = 0;
+      function type() {
+        if (i < fullText.length) {
+          gradientText.textContent += fullText[i];
+          i++;
+          setTimeout(type, 60 + Math.random() * 40);
+        } else {
+          setTimeout(() => { gradientText.style.borderRight = 'none'; }, 1200);
+        }
+      }
+      setTimeout(type, 800);
+    }
+
+    // === MOUSE-TRACKING GLOW ON SERVICE CARDS ===
+    document.querySelectorAll('.service-card').forEach(card => {
+      // Inject glow div
+      const glow = document.createElement('div');
+      glow.className = 'card-glow';
+      card.appendChild(glow);
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        glow.style.left = x + 'px';
+        glow.style.top = y + 'px';
+        // Subtle tilt
+        const tiltX = ((y / rect.height) - 0.5) * 8;
+        const tiltY = ((x / rect.width) - 0.5) * -8;
+        card.style.transform = `translateY(-10px) scale(1.01) perspective(600px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+
+    // === RIPPLE EFFECT ON BUTTONS ===
+    document.querySelectorAll('.btn-primary').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+        ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+        this.appendChild(ripple);
+        ripple.addEventListener('animationend', () => ripple.remove());
+      });
+    });
+
+    // === PARALLAX ON HERO IMAGE ===
+    const heroImg = document.querySelector('.hero-image');
+    window.addEventListener('scroll', () => {
+      if (heroImg) {
+        const scrollY = window.scrollY;
+        heroImg.style.transform = `translateY(${scrollY * 0.12}px)`;
+      }
+    });
+
+    // === ENHANCED PARTICLE SYSTEM: MOUSE INTERACTION ===
+    let mouseX = -1000, mouseY = -1000;
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    // Override drawParticles to add mouse interaction
+    const originalDraw = drawParticles;
+    cancelAnimationFrame(animationId);
+    function drawParticlesEnhanced() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((p, i) => {
+        // Mouse repulsion
+        const dx = p.x - mouseX;
+        const dy = p.y - mouseY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 100) {
+          const force = (100 - dist) / 100;
+          p.x += (dx / dist) * force * 2;
+          p.y += (dy / dist) * force * 2;
+        }
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0) p.x = canvas.width;
+        if (p.x > canvas.width) p.x = 0;
+        if (p.y < 0) p.y = canvas.height;
+        if (p.y > canvas.height) p.y = 0;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        const nearMouse = dist < 120 ? Math.min(0.8, p.opacity + 0.4) : p.opacity;
+        ctx.fillStyle = `rgba(59, 130, 246, ${nearMouse})`;
+        ctx.fill();
+
+        for (let j = i + 1; j < particles.length; j++) {
+          const ddx = p.x - particles[j].x;
+          const ddy = p.y - particles[j].y;
+          const d = Math.sqrt(ddx * ddx + ddy * ddy);
+          if (d < 150) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.08 * (1 - d / 150)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      });
+      animationId = requestAnimationFrame(drawParticlesEnhanced);
+    }
+    drawParticlesEnhanced();
+
+    // === STAGGERED SCROLL ANIMATIONS ===
+    const staggerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const children = entry.target.querySelectorAll('.service-card, .result-card, .blog-card');
+          children.forEach((child, index) => {
+            setTimeout(() => {
+              child.style.opacity = '1';
+              child.style.transform = 'translateY(0)';
+            }, index * 100);
+          });
+          staggerObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.services-grid, .results-grid, .blog-grid').forEach(grid => {
+      grid.querySelectorAll('.service-card, .result-card, .blog-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(40px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      });
+      staggerObserver.observe(grid);
     });
   </script>
 </body>
