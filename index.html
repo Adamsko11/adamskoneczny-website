@@ -678,13 +678,20 @@
     .service-icon {
       width: 56px;
       height: 56px;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(37, 99, 235, 0.05));
-      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(37, 99, 235, 0.06));
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
       margin-bottom: 24px;
+      flex-shrink: 0;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    .service-icon svg {
+      width: 26px;
+      height: 26px;
+      color: var(--blue-400);
+      stroke: var(--blue-400);
     }
 
     .service-card h3 {
@@ -871,12 +878,32 @@
 
     .blog-card-image {
       height: 200px;
-      background: linear-gradient(135deg, var(--navy-700), var(--navy-600));
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 3rem;
-      opacity: 0.5;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-card-image.img-sales {
+      background: linear-gradient(135deg, #0f1e3d 0%, #1a3a6e 50%, #0f2855 100%);
+    }
+    .blog-card-image.img-global {
+      background: linear-gradient(135deg, #0d2137 0%, #0f3d2e 50%, #0d2a1e 100%);
+    }
+    .blog-card-image.img-outbound {
+      background: linear-gradient(135deg, #1a0d2e 0%, #2d1654 50%, #1a0d3a 100%);
+    }
+    .blog-card-image svg {
+      width: 64px;
+      height: 64px;
+      opacity: 0.85;
+    }
+    .blog-card-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.04) 0%, transparent 70%);
+      pointer-events: none;
     }
 
     .blog-card-body { padding: 28px; }
@@ -1223,7 +1250,7 @@
       </div>
       <div class="hero-image">
         <div class="hero-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=900&h=600&fit=crop&q=90" alt="Adam Skoneczny â B2B Sales Strategist" loading="eager">
+          <img src="https://lh3.googleusercontent.com/d/1BxIL-gD8LpAXhUVCrh4VUOXNMh4GSH0A=s1200" alt="Adam Skoneczny â B2B Sales Strategist" loading="eager">
         </div>
         <div class="hero-image-frame"></div>
       </div>
@@ -1234,7 +1261,7 @@
   <section class="about" id="about">
     <div class="container">
       <div class="about-image-wrapper animate-on-scroll slide-left">
-        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=550&fit=crop&q=90" alt="Adam Skoneczny portrait" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1YWbg_hHhQFdI8Adj6wwlJoE54wSj4AYH=s1200" alt="Adam Skoneczny portrait" loading="lazy">
         <div class="about-image-accent"></div>
       </div>
       <div class="animate-on-scroll slide-right">
@@ -1289,32 +1316,61 @@
       </div>
       <div class="services-grid">
         <div class="service-card animate-on-scroll">
-          <div class="service-icon">&#128640;</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+              <line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/>
+              <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+            </svg>
+          </div>
           <h3>Go-to-Market Strategy</h3>
           <p>Identify your ideal customers in EU/US markets, craft your positioning, and build a market entry roadmap that gives your team clarity and direction from day one.</p>
         </div>
         <div class="service-card animate-on-scroll">
-          <div class="service-icon">&#127993;</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/>
+            </svg>
+          </div>
           <h3>Outbound Sales Engine</h3>
           <p>Build a repeatable lead generation machine â LinkedIn outreach, email sequences, qualification frameworks â so you never rely on referrals alone again.</p>
         </div>
         <div class="service-card animate-on-scroll">
-          <div class="service-icon">&#128218;</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+            </svg>
+          </div>
           <h3>Sales Process Design</h3>
           <p>Design the complete sales workflow from first touch to close: discovery calls, proposals, follow-ups, objection handling, all documented and trainable.</p>
         </div>
         <div class="service-card animate-on-scroll">
-          <div class="service-icon">&#127891;</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
           <h3>Team Training & Coaching</h3>
           <p>Train your sales and marketing team using the STRAIGHT SPIN methodology, with weekly coaching calls and live deal reviews to accelerate their performance.</p>
         </div>
         <div class="service-card animate-on-scroll">
-          <div class="service-icon">&#128176;</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+            </svg>
+          </div>
           <h3>Pipeline Management</h3>
           <p>Set up CRM, dashboards, and reporting systems so you always know where your deals stand and what actions will move the needle this week.</p>
         </div>
         <div class="service-card animate-on-scroll">
-          <div class="service-icon">&#127760;</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
           <h3>Brand & Authority Building</h3>
           <p>Build your founder brand and company authority through LinkedIn content strategy, case studies, and thought leadership that attracts inbound interest.</p>
         </div>
@@ -1362,7 +1418,7 @@
           </div>
         </div>
         <div class="methodology-image animate-on-scroll slide-right">
-          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=550&fit=crop&q=90" alt="Adam Skoneczny consulting" loading="lazy">
+          <img src="https://lh3.googleusercontent.com/d/11Xt2yaELnT8-F33brD7WGoYeF57iDCUU=s1200" alt="Adam Skoneczny consulting" loading="lazy">
         </div>
       </div>
     </div>
@@ -1423,30 +1479,45 @@
         <p class="section-subtitle" style="margin: 0 auto;">Practical insights on B2B sales, international expansion, and building revenue engines for tech companies.</p>
       </div>
       <div class="blog-grid">
-        <div class="blog-card animate-on-scroll">
-          <div class="blog-card-image">&#128214;</div>
+        <a class="blog-card animate-on-scroll" href="insights.html" style="text-decoration:none;color:inherit;display:block;">
+          <div class="blog-card-image img-sales">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
           <div class="blog-card-body">
             <span class="blog-card-tag">Sales Strategy</span>
             <h3>Why Your IT Company Stops Growing After Referrals Run Out</h3>
             <p>Most tech founders exhaust their personal network within 2-3 years. Here is what to build instead of hoping for the next warm intro.</p>
           </div>
-        </div>
-        <div class="blog-card animate-on-scroll">
-          <div class="blog-card-image">&#127758;</div>
+        </a>
+        <a class="blog-card animate-on-scroll" href="insights.html" style="text-decoration:none;color:inherit;display:block;">
+          <div class="blog-card-image img-global">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
           <div class="blog-card-body">
             <span class="blog-card-tag">Market Expansion</span>
             <h3>The 5 Mistakes Asian IT Companies Make When Entering EU Markets</h3>
             <p>After working with dozens of tech companies expanding West, these are the patterns that consistently slow them down.</p>
           </div>
-        </div>
-        <div class="blog-card animate-on-scroll">
-          <div class="blog-card-image">&#128161;</div>
+        </a>
+        <a class="blog-card animate-on-scroll" href="insights.html" style="text-decoration:none;color:inherit;display:block;">
+          <div class="blog-card-image img-outbound">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </div>
           <div class="blog-card-body">
             <span class="blog-card-tag">Outbound</span>
             <h3>How to Book 10 Discovery Calls Per Month With Cold Outreach</h3>
             <p>A practical framework for tech companies that want to stop waiting for leads and start creating their own pipeline.</p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
