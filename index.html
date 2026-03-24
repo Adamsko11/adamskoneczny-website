@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adam Skoneczny â B2B Sales Strategist for Tech Companies</title>
+  <title>Adam Skoneczny — B2B Sales Strategist for Tech Companies</title>
   <meta name="description" content="Adam Skoneczny helps Asian IT and tech companies build repeatable sales pipelines to break into EU and US markets. Founder of EVIT Organization.">
-  <meta property="og:title" content="Adam Skoneczny â B2B Sales Strategist">
+  <meta property="og:title" content="Adam Skoneczny — B2B Sales Strategist">
   <meta property="og:description" content="Helping Asian IT companies build sales engines for EU/US market expansion.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://adamskoneczny.com">
@@ -672,8 +672,7 @@
     .service-card:nth-child(3) { transition-delay: 0.15s; }
     .service-card:nth-child(4) { transition-delay: 0.2s; }
     .service-card:nth-child(5) { transition-delay: 0.25s; }
-    .service-card:nth-child(6) { transition-delay: 0.3s;
-}
+    .service-card:nth-child(6) { transition-delay: 0.3s; }
 
     .service-icon {
       width: 56px;
@@ -1139,12 +1138,16 @@
         background: rgba(10, 15, 30, 0.98);
         padding: 20px 24px;
         gap: 16px;
+        border-top: 1px solid rgba(255,255,255,0.08);
       }
 
       .hero { padding: 100px 0 60px; }
-      .hero h1 { font-size: 2.2rem; }
-      .hero-stats { gap: 24px; }
+      .hero h1 { font-size: clamp(1.9rem, 7vw, 2.4rem); }
+      .hero-description { font-size: 1rem; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
       .hero-stat-number { font-size: 1.5rem; }
+      .hero-buttons { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; padding: 14px 24px; }
 
       .services-grid,
       .results-grid,
@@ -1152,12 +1155,48 @@
         grid-template-columns: 1fr;
       }
 
+      .section-title { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+
       .about-highlights { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
 
-      section { padding: 70px 0; }
+      section { padding: 60px 0; }
 
       .footer-content { flex-direction: column; gap: 24px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+
+      .hero { padding: 90px 0 48px; }
+      .hero h1 { font-size: 1.8rem; line-height: 1.25; }
+      .hero-description { font-size: 0.95rem; margin-bottom: 28px; }
+      .hero-badge { font-size: 0.75rem; }
+      .hero-stats { gap: 20px; margin-top: 32px; padding-top: 24px; }
+      .hero-stat-number { font-size: 1.35rem; }
+      .hero-stat-label { font-size: 0.78rem; }
+
+      .section-label { font-size: 0.72rem; }
+      .section-title { font-size: 1.6rem; }
+
+      .about-highlight { gap: 12px; }
+      .about-highlight-icon { font-size: 1.4rem; }
+
+      .service-card, .result-card, .blog-card { padding: 24px 20px; }
+      .service-icon { width: 48px; height: 48px; }
+
+      .result-number { font-size: 2.2rem; }
+
+      .step-number { font-size: 2rem; }
+
+      .contact-form { padding: 28px 20px; }
+      .form-group input,
+      .form-group textarea,
+      .form-group select { font-size: 0.95rem; padding: 12px 14px; }
+
+      section { padding: 48px 0; }
+      .footer-links { flex-wrap: wrap; gap: 16px; justify-content: center; }
     }
 
     /* ===== PARTICLE CANVAS ===== */
@@ -1250,7 +1289,7 @@
       </div>
       <div class="hero-image">
         <div class="hero-image-wrapper">
-          <img src="https://lh3.googleusercontent.com/d/1BxIL-gD8LpAXhUVCrh4VUOXNMh4GSH0A=s1200" alt="Adam Skoneczny â B2B Sales Strategist" loading="eager">
+          <img src="https://lh3.googleusercontent.com/d/1BxIL-gD8LpAXhUVCrh4VUOXNMh4GSH0A=s1200" alt="Adam Skoneczny — B2B Sales Strategist" loading="eager">
         </div>
         <div class="hero-image-frame"></div>
       </div>
@@ -1270,7 +1309,7 @@
         <div class="about-text">
           <p>I left Poland at 19, built a corporate career in Ireland, and walked away from it to move to Asia. That was over ten years ago.</p>
           <p>Working with technology companies across APAC, Europe and the US, I kept seeing the same pattern: brilliant engineers building great products with no idea how to sell them internationally.</p>
-          <p>That is the gap I decided, together with my team at EVIT, to close. I am passionate about helping B2B tech companies build the revenue engine they are missing â sales process, positioning, pipeline, go-to-market â so they can turn technical excellence into international business.</p>
+          <p>That is the gap I decided, together with my team at EVIT, to close. I am passionate about helping B2B tech companies build the revenue engine they are missing — sales process, positioning, pipeline, go-to-market — so they can turn technical excellence into international business.</p>
         </div>
         <div class="about-highlights">
           <div class="about-highlight">
@@ -1333,7 +1372,7 @@
             </svg>
           </div>
           <h3>Outbound Sales Engine</h3>
-          <p>Build a repeatable lead generation machine â LinkedIn outreach, email sequences, qualification frameworks â so you never rely on referrals alone again.</p>
+          <p>Build a repeatable lead generation machine — LinkedIn outreach, email sequences, qualification frameworks — so you never rely on referrals alone again.</p>
         </div>
         <div class="service-card animate-on-scroll">
           <div class="service-icon">
@@ -1392,21 +1431,21 @@
             <div class="methodology-step-number">1</div>
             <div>
               <h4>Discovery & Assessment</h4>
-              <p>We map your current situation â team, product, market, pipeline, blockers. No assumptions, only facts.</p>
+              <p>We map your current situation — team, product, market, pipeline, blockers. No assumptions, only facts.</p>
             </div>
           </div>
           <div class="methodology-step animate-on-scroll">
             <div class="methodology-step-number">2</div>
             <div>
               <h4>Master Plan & Setup</h4>
-              <p>You receive a complete sales strategy â ICP definition, messaging, outreach scripts, process maps, and KPI targets.</p>
+              <p>You receive a complete sales strategy — ICP definition, messaging, outreach scripts, process maps, and KPI targets.</p>
             </div>
           </div>
           <div class="methodology-step animate-on-scroll">
             <div class="methodology-step-number">3</div>
             <div>
               <h4>Build & Execute</h4>
-              <p>We build your outbound engine together â LinkedIn campaigns, email sequences, CRM setup, team training.</p>
+              <p>We build your outbound engine together — LinkedIn campaigns, email sequences, CRM setup, team training.</p>
             </div>
           </div>
           <div class="methodology-step animate-on-scroll">
@@ -1528,7 +1567,7 @@
       <div class="animate-on-scroll">
         <div class="section-label" style="justify-content: center;">Ready to grow?</div>
         <h2>Let's Build Your Sales Engine</h2>
-        <p>If you are a tech founder looking to break into new markets with a structured, results-driven approach â I would like to hear from you.</p>
+        <p>If you are a tech founder looking to break into new markets with a structured, results-driven approach — I would like to hear from you.</p>
         <a href="#contact" class="btn-primary" style="font-size: 1.1rem; padding: 18px 40px;">
           Schedule a Discovery Call
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1598,7 +1637,7 @@
           </div>
           <div class="form-group">
             <label for="company">Company & Role</label>
-            <input type="text" id="company" name="company" placeholder="Acme Tech â CEO">
+            <input type="text" id="company" name="company" placeholder="Acme Tech — CEO">
           </div>
           <div class="form-group">
             <label for="message">How can I help?</label>
