@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Built a 28-Agent AI System to Run My Sales Consultancy. Here Is What Actually Works. — Adam Skoneczny</title>
+  <meta name="description" content="How a 3-person B2B consultancy uses 28 specialized AI agents to operate like a company 10x its size. Real system, real results, no hype.">
+  <meta property="og:title" content="I Built a 28-Agent AI System to Run My Sales Consultancy. Here Is What Actually Works.">
+  <meta property="og:description" content="How a 3-person B2B consultancy uses 28 specialized AI agents to operate like a company 10x its size. Real system, real results, no hype.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://adamskoneczny.com/insights/ai-agent-system-sales-consultancy.html">
+  <meta property="og:site_name" content="Adam Skoneczny">
+  <meta property="article:author" content="Adam Skoneczny">
+  <meta property="article:published_time" content="2026-04-04">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="I Built a 28-Agent AI System to Run My Sales Consultancy">
+  <meta name="twitter:description" content="How a 3-person B2B consultancy uses 28 specialized AI agents to operate like a company 10x its size.">
+  <link rel="canonical" href="https://adamskoneczny.com/insights/ai-agent-system-sales-consultancy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD: Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "I Built a 28-Agent AI System to Run My Sales Consultancy. Here Is What Actually Works.",
+    "description": "How a 3-person B2B sales consultancy uses 28 specialized AI agents across sales, marketing, operations, and client delivery to operate like a company 10x its size.",
+    "author": {
+      "@type": "Person",
+      "name": "Adam Skoneczny",
+      "url": "https://adamskoneczny.com",
+      "jobTitle": "B2B Sales Strategist",
+      "sameAs": [
+        "https://www.linkedin.com/in/adamskoneczny/",
+        "https://www.youtube.com/@goglobalasia"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EVIT Organization",
+      "url": "https://evit-org.com"
+    },
+    "datePublished": "2026-04-04",
+    "dateModified": "2026-04-04",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://adamskoneczny.com/insights/ai-agent-system-sales-consultancy.html"
+    },
+    "keywords": ["AI agents for business", "AI sales consultancy", "AI agent system", "small business AI operations", "B2B sales automation", "AI-powered consulting"]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How can a small consultancy use AI agents to scale operations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A small consultancy can build a system of specialized AI agents, each handling a specific business function like lead research, content creation, discovery call preparation, SEO optimization, or pipeline management. Instead of one general AI tool, you create focused agents with defined roles, inputs, outputs, and escalation rules. At EVIT, a 3-person B2B sales consultancy, 28 agents handle everything from scouting leads to preparing discovery call briefings to writing blog posts, allowing the team to operate with the throughput of a much larger organization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of AI agents are most useful for B2B sales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The highest-impact AI agents for B2B sales are: a Scout Agent that researches and identifies leads matching your ideal customer profile, a Discovery Prep Agent that builds detailed briefings before every sales call, an Outreach Agent that drafts personalized messages based on buyer signals, a Content Agent that writes thought leadership in the founder's voice, and an Assistant Agent that acts as a Chief of Staff coordinating all other agents. These five alone can transform a founder-led sales process into a systematic revenue engine."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between AI tools and AI agents for business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI tools respond when you ask them something. AI agents operate with defined missions, context, decision frameworks, and escalation protocols. A tool waits for input. An agent has a job description, knows what files to read before starting work, follows a priority hierarchy when tasks conflict, and knows when to escalate to a human. The shift from tools to agents is the difference between having a chatbot and having a team member."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you prevent AI agents from making mistakes or hallucinating?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every agent in the system has explicit anti-hallucination rules: never invent metrics, never claim results that have not been verified, never fabricate client names or case studies. Agents are required to flag uncertainty with markers like 'NEEDS ADAM INPUT' or 'ASSUMPTION' so a human always reviews claims before they reach clients or get published. Additionally, each agent has guardrails defining what it can never do, such as contacting clients directly or publishing content without approval."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to build an AI agent system for a small business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Building a single agent with a clear role, context loading instructions, decision framework, and quality standards takes roughly one focused day. Building a full multi-agent system with 20-30 agents covering sales, marketing, operations, and delivery took about 3 months of iterative development at EVIT. The key is starting with the highest-leverage agent first (for most businesses, that is the one closest to revenue) and expanding from there."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: ItemList Schema for GEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "AI Agent Categories for B2B Sales Consultancy",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Revenue Engine Agents (Scout, Pre-Qualifier, Outreach, Post-Reply Qualifier, Discovery Prep)"},
+      {"@type": "ListItem", "position": 2, "name": "Marketing Department Agents (Marketing Leader, Strategy, Content, Design, SEO/GEO, Daily Task, Ads)"},
+      {"@type": "ListItem", "position": 3, "name": "Operations Agents (Assistant/Chief of Staff, Admin, Accounting)"},
+      {"@type": "ListItem", "position": 4, "name": "Client Delivery Agents (Client Success)"},
+      {"@type": "ListItem", "position": 5, "name": "Product Development Agents (Code Team of 9 specialized agents)"}
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy-900: #0a0f1e; --navy-800: #0f1629; --navy-700: #141d38; --navy-600: #1a2747;
+      --blue-500: #2563eb; --blue-400: #3b82f6; --blue-300: #60a5fa; --blue-200: #93c5fd;
+      --gold-400: #c9a84c; --gold-300: #d4b85c;
+      --white: #ffffff; --gray-100: #f1f5f9; --gray-200: #e2e8f0; --gray-300: #cbd5e1;
+      --gray-400: #94a3b8; --gray-500: #64748b;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--navy-900); color: var(--gray-200); line-height: 1.7; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.2; }
+    a { color: var(--blue-300); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--blue-200); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(10, 15, 30, 0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(59, 130, 246, 0.12); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); }
+    .nav-logo span { background: linear-gradient(135deg, var(--blue-400), var(--gold-400)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--gray-300); transition: color 0.3s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--blue-500); color: var(--white) !important; padding: 10px 24px; border-radius: 8px; font-weight: 600 !important; transition: background 0.3s !important; }
+    .nav-cta:hover { background: var(--blue-400) !important; color: var(--white) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { width: 25px; height: 2px; background: var(--white); display: block; transition: all 0.3s; }
+
+    /* ARTICLE LAYOUT */
+    .article-hero { padding: 140px 0 60px; background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-900) 100%); position: relative; overflow: hidden; }
+    .article-hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%); pointer-events: none; }
+    .article-hero-label { display: inline-flex; align-items: center; gap: 8px; background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.25); color: var(--blue-300); padding: 6px 16px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px; }
+    .article-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); color: var(--white); margin-bottom: 20px; max-width: 800px; }
+    .article-hero h1 em { background: linear-gradient(135deg, var(--blue-400), var(--gold-400)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-style: normal; }
+    .article-meta { display: flex; align-items: center; gap: 16px; color: var(--gray-500); font-size: 0.85rem; margin-top: 20px; }
+    .article-meta-dot { width: 3px; height: 3px; background: var(--gray-500); border-radius: 50%; }
+
+    .article-body { max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
+    .article-body p { color: var(--gray-200); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px; }
+    .article-body h2 { font-size: 1.6rem; color: var(--white); margin-top: 48px; margin-bottom: 20px; }
+    .article-body h3 { font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--blue-300); margin-top: 32px; margin-bottom: 12px; }
+    .article-body ul, .article-body ol { margin-bottom: 24px; padding-left: 24px; }
+    .article-body li { color: var(--gray-300); font-size: 1rem; line-height: 1.7; margin-bottom: 10px; }
+    .article-body strong { color: var(--white); font-weight: 600; }
+    .article-body blockquote { border-left: 3px solid var(--blue-500); padding: 16px 24px; margin: 32px 0; background: rgba(37, 99, 235, 0.06); border-radius: 0 8px 8px 0; }
+    .article-body blockquote p { color: var(--gray-300); font-size: 1rem; margin-bottom: 0; }
+
+    .agent-card { background: var(--navy-800); border: 1px solid rgba(59, 130, 246, 0.12); border-radius: 12px; padding: 28px; margin: 24px 0; }
+    .agent-card h3 { margin-top: 0; color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.2rem; }
+    .agent-card .role { color: var(--blue-300); font-size: 0.88rem; margin-top: 4px; margin-bottom: 12px; }
+    .agent-card p { font-size: 0.95rem; }
+
+    /* FAQ */
+    .faq-section { margin-top: 48px; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); padding: 24px 0; }
+    .faq-item h3 { color: var(--white); font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 600; margin-top: 0; margin-bottom: 12px; }
+    .faq-item p { margin-bottom: 0; font-size: 0.98rem; }
+
+    /* CTA */
+    .article-cta { background: linear-gradient(135deg, var(--navy-700), var(--navy-800)); border: 1px solid rgba(59,130,246,0.15); border-radius: 14px; padding: 40px; margin: 48px 0; text-align: center; }
+    .article-cta h2 { font-size: 1.5rem; color: var(--white); margin-bottom: 16px; }
+    .article-cta p { color: var(--gray-400); margin-bottom: 24px; }
+    .article-cta .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--blue-500), var(--blue-400)); color: var(--white); padding: 14px 32px; border-radius: 10px; font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer; font-family: inherit; transition: transform 0.2s, box-shadow 0.3s; }
+    .article-cta .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,99,235,0.4); }
+
+    .article-ps { color: var(--gray-400); font-size: 0.92rem; margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .article-ps strong { color: var(--gray-300); }
+
+    /* FOOTER */
+    footer { padding: 48px 0 32px; background: var(--navy-900); border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 32px; margin-bottom: 24px; flex-wrap: wrap; gap: 20px; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--white); }
+    .footer-logo span { background: linear-gradient(135deg, var(--blue-400), var(--gold-400)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--gray-400); font-size: 0.88rem; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { text-align: center; color: var(--gray-500); font-size: 0.82rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .article-hero { padding: 110px 0 48px; }
+      .article-hero h1 { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+      .article-body { padding: 40px 16px 60px; }
+      .agent-card { padding: 20px; }
+      .article-cta { padding: 28px 20px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+    }
+
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .animate { animation: fadeInUp 0.6s ease both; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/index.html" class="nav-logo">Adam <span>Skoneczny</span></a>
+      <ul class="nav-links">
+        <li><a href="/index.html#about">About</a></li>
+        <li><a href="/index.html#services">Services</a></li>
+        <li><a href="/index.html#results">Results</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/index.html#contact" class="nav-cta">Work With Me</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Built a 28-Agent AI System to Run My Sales Consultancy. Here Is What Actually Works. — Adam Skoneczny</title>
+  <meta name="description" content="How a 3-person B2B consultancy uses 28 specialized AI agents to operate like a company 10x its size. Real system, real results, no hype.">
+  <meta property="og:title" content="I Built a 28-Agent AI System to Run My Sales Consultancy. Here Is What Actually Works.">
+  <meta property="og:description" content="How a 3-person B2B consultancy uses 28 specialized AI agents to operate like a company 10x its size. Real system, real results, no hype.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://adamskoneczny.com/insights/ai-agent-system-sales-consultancy.html">
+  <meta property="og:site_name" content="Adam Skoneczny">
+  <meta property="article:author" content="Adam Skoneczny">
+  <meta property="article:published_time" content="2026-04-04">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="I Built a 28-Agent AI System to Run My Sales Consultancy">
+  <meta name="twitter:description" content="How a 3-person B2B consultancy uses 28 specialized AI agents to operate like a company 10x its size.">
+  <link rel="canonical" href="https://adamskoneczny.com/insights/ai-agent-system-sales-consultancy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD: Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "I Built a 28-Agent AI System to Run My Sales Consultancy. Here Is What Actually Works.",
+    "description": "How a 3-person B2B sales consultancy uses 28 specialized AI agents across sales, marketing, operations, and client delivery to operate like a company 10x its size.",
+    "author": {
+      "@type": "Person",
+      "name": "Adam Skoneczny",
+      "url": "https://adamskoneczny.com",
+      "jobTitle": "B2B Sales Strategist",
+      "sameAs": [
+        "https://www.linkedin.com/in/adamskoneczny/",
+        "https://www.youtube.com/@goglobalasia"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EVIT Organization",
+      "url": "https://evit-org.com"
+    },
+    "datePublished": "2026-04-04",
+    "dateModified": "2026-04-04",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://adamskoneczny.com/insights/ai-agent-system-sales-consultancy.html"
+    },
+    "keywords": ["AI agents for business", "AI sales consultancy", "AI agent system", "small business AI operations", "B2B sales automation", "AI-powered consulting"]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How can a small consultancy use AI agents to scale operations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A small consultancy can build a system of specialized AI agents, each handling a specific business function like lead research, content creation, discovery call preparation, SEO optimization, or pipeline management. Instead of one general AI tool, you create focused agents with defined roles, inputs, outputs, and escalation rules. At EVIT, a 3-person B2B sales consultancy, 28 agents handle everything from scouting leads to preparing discovery call briefings to writing blog posts, allowing the team to operate with the throughput of a much larger organization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of AI agents are most useful for B2B sales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The highest-impact AI agents for B2B sales are: a Scout Agent that researches and identifies leads matching your ideal customer profile, a Discovery Prep Agent that builds detailed briefings before every sales call, an Outreach Agent that drafts personalized messages based on buyer signals, a Content Agent that writes thought leadership in the founder's voice, and an Assistant Agent that acts as a Chief of Staff coordinating all other agents. These five alone can transform a founder-led sales process into a systematic revenue engine."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between AI tools and AI agents for business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI tools respond when you ask them something. AI agents operate with defined missions, context, decision frameworks, and escalation protocols. A tool waits for input. An agent has a job description, knows what files to read before starting work, follows a priority hierarchy when tasks conflict, and knows when to escalate to a human. The shift from tools to agents is the difference between having a chatbot and having a team member."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you prevent AI agents from making mistakes or hallucinating?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every agent in the system has explicit anti-hallucination rules: never invent metrics, never claim results that have not been verified, never fabricate client names or case studies. Agents are required to flag uncertainty with markers like 'NEEDS ADAM INPUT' or 'ASSUMPTION' so a human always reviews claims before they reach clients or get published. Additionally, each agent has guardrails defining what it can never do, such as contacting clients directly or publishing content without approval."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to build an AI agent system for a small business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Building a single agent with a clear role, context loading instructions, decision framework, and quality standards takes roughly one focused day. Building a full multi-agent system with 20-30 agents covering sales, marketing, operations, and delivery took about 3 months of iterative development at EVIT. The key is starting with the highest-leverage agent first (for most businesses, that is the one closest to revenue) and expanding from there."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: ItemList Schema for GEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "AI Agent Categories for B2B Sales Consultancy",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Revenue Engine Agents (Scout, Pre-Qualifier, Outreach, Post-Reply Qualifier, Discovery Prep)"},
+      {"@type": "ListItem", "position": 2, "name": "Marketing Department Agents (Marketing Leader, Strategy, Content, Design, SEO/GEO, Daily Task, Ads)"},
+      {"@type": "ListItem", "position": 3, "name": "Operations Agents (Assistant/Chief of Staff, Admin, Accounting)"},
+      {"@type": "ListItem", "position": 4, "name": "Client Delivery Agents (Client Success)"},
+      {"@type": "ListItem", "position": 5, "name": "Product Development Agents (Code Team of 9 specialized agents)"}
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy-900: #0a0f1e; --navy-800: #0f1629; --navy-700: #141d38; --navy-600: #1a2747;
+      --blue-500: #2563eb; --blue-400: #3b82f6; --blue-300: #60a5fa; --blue-200: #93c5fd;
+      --gold-400: #c9a84c; --gold-300: #d4b85c;
+      --white: #ffffff; --gray-100: #f1f5f9; --gray-200: #e2e8f0; --gray-300: #cbd5e1;
+      --gray-400: #94a3b8; --gray-500: #64748b;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--navy-900); color: var(--gray-200); line-height: 1.7; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.2; }
+    a { color: var(--blue-300); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--blue-200); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(10, 15, 30, 0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(59, 130, 246, 0.12); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); }
+    .nav-logo span { background: linear-gradient(135deg, var(--blue-400), var(--gold-400)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--gray-300); transition: color 0.3s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--blue-500); color: var(--white) !important; padding: 10px 24px; border-radius: 8px; font-weight: 600 !important; transition: background 0.3s !important; }
+    .nav-cta:hover { background: var(--blue-400) !important; color: var(--white) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { width: 25px; height: 2px; background: var(--white); display: block; transition: all 0.3s; }
+    .article-hero { padding: 140px 0 60px; background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-900) 100%); position: relative; overflow: hidden; }
+    .article-hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%); pointer-events: none; }
+    .article-hero-label { display: inline-flex; align-items: center; gap: 8px; background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.25); color: var(--blue-300); padding: 6px 16px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px; }
+    .article-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); color: var(--white); margin-bottom: 20px; max-width: 800px; }
+    .article-hero h1 em { background: linear-gradient(135deg, var(--blue-400), var(--gold-400)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-style: normal; }
+    .article-meta { display: flex; align-items: center; gap: 16px; color: var(--gray-500); font-size: 0.85rem; margin-top: 20px; }
+    .article-meta-dot { width: 3px; height: 3px; background: var(--gray-500); border-radius: 50%; }
+    .article-body { max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
+    .article-body p { color: var(--gray-200); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px; }
+    .article-body h2 { font-size: 1.6rem; color: var(--white); margin-top: 48px; margin-bottom: 20px; }
+    .article-body h3 { font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--blue-300); margin-top: 32px; margin-bottom: 12px; }
+    .article-body ul, .article-body ol { margin-bottom: 24px; padding-left: 24px; }
+    .article-body li { color: var(--gray-300); font-size: 1rem; line-height: 1.7; margin-bottom: 10px; }
+    .article-body strong { color: var(--white); font-weight: 600; }
+    .article-body blockquote { border-left: 3px solid var(--blue-500); padding: 16px 24px; margin: 32px 0; background: rgba(37, 99, 235, 0.06); border-radius: 0 8px 8px 0; }
+    .article-body blockquote p { color: var(--gray-300); font-size: 1rem; margin-bottom: 0; }
+    .agent-card { background: var(--navy-800); border: 1px solid rgba(59, 130, 246, 0.12); border-radius: 12px; padding: 28px; margin: 24px 0; }
+    .agent-card h3 { margin-top: 0; color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.2rem; }
+    .agent-card .role { color: var(--blue-300); font-size: 0.88rem; margin-top: 4px; margin-bottom: 12px; }
+    .agent-card p { font-size: 0.95rem; }
+    .faq-section { margin-top: 48px; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); padding: 24px 0; }
+    .faq-item h3 { color: var(--white); font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 600; margin-top: 0; margin-bottom: 12px; }
+    .faq-item p { margin-bottom: 0; font-size: 0.98rem; }
+    .article-cta { background: linear-gradient(135deg, var(--navy-700), var(--navy-800)); border: 1px solid rgba(59,130,246,0.15); border-radius: 14px; padding: 40px; margin: 48px 0; text-align: center; }
+    .article-cta h2 { font-size: 1.5rem; color: var(--white); margin-bottom: 16px; }
+    .article-cta p { color: var(--gray-400); margin-bottom: 24px; }
+    .article-cta .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--blue-500), var(--blue-400)); color: var(--white); padding: 14px 32px; border-radius: 10px; font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer; font-family: inherit; transition: transform 0.2s, box-shadow 0.3s; }
+    .article-cta .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,99,235,0.4); }
+    .article-ps { color: var(--gray-400); font-size: 0.92rem; margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .article-ps strong { color: var(--gray-300); }
+    footer { padding: 48px 0 32px; background: var(--navy-900); border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 32px; margin-bottom: 24px; flex-wrap: wrap; gap: 20px; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--white); }
+    .footer-logo span { background: linear-gradient(135deg, var(--blue-400), var(--gold-400)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--gray-400); font-size: 0.88rem; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { text-align: center; color: var(--gray-500); font-size: 0.82rem; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .article-hero { padding: 110px 0 48px; }
+      .article-hero h1 { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+      .article-body { padding: 40px 16px 60px; }
+      .agent-card { padding: 20px; }
+      .article-cta { padding: 28px 20px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+    }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .animate { animation: fadeInUp 0.6s ease both; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/index.html" class="nav-logo">Adam <span>Skoneczny</span></a>
+      <ul class="nav-links">
+        <li><a href="/index.html#about">About</a></li>
+        <li><a href="/index.html#services">Services</a></li>
+        <li><a href="/index.html#results">Results</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/index.html#contact" class="nav-cta">Work With Me</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="article-hero">
+    <div class="container animate">
+      <div class="article-hero-label">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="6"/></svg>
+        AI &amp; Operations
+      </div>
+      <h1>I Built a 28-Agent AI System to Run My Sales Consultancy. Here Is <em>What Actually Works.</em></h1>
+      <div class="article-meta">
+        <span>Adam Skoneczny</span>
+        <span class="article-meta-dot"></span>
+        <span>April 4, 2026</span>
+        <span class="article-meta-dot"></span>
+        <span>11 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p>A small B2B consultancy can use AI agents to scale operations by building a system of specialized agents, each handling a specific business function: lead research, content creation, discovery call preparation, pipeline management, SEO optimization, and more. Instead of one general-purpose AI chatbot, you create focused agents with defined roles, inputs, outputs, and escalation rules. At my company EVIT, where we help Asian IT companies break into EU and US markets, I built a system of 28 AI agents that lets a team of 3 full-time people operate with the throughput of a company 10 times our size.</p>
+
+    <p>This is not a theoretical exercise. These agents run daily. They scan for leads, prepare discovery call briefings, draft content in my voice, audit my pipeline, optimize my website for AI search visibility, and coordinate with each other through defined handoff protocols. Some of this works incredibly well. Some of it taught me hard lessons. Here is what I have learned building this system over the past 3 months.</p>
+
+    <h2>Why Agents, Not Tools</h2>
+
+    <p>The difference between an AI tool and an AI agent is the difference between a calculator and a team member. A tool responds when you ask it something. An agent has a job description, knows what context to load before starting work, follows a priority hierarchy when tasks conflict, and knows exactly when to escalate to a human instead of guessing.</p>
+
+    <p>Early on, I was using AI the way most people do. I would open a chat, ask a question, get an answer, move on. The problem was that every conversation started from zero. No context about my business, my clients, my pipeline, my methodology. I was spending more time explaining my situation than getting useful output.</p>
+
+    <p>The shift happened when I started writing agent specifications. Each agent gets a markdown file that defines its identity, mission, context loading instructions (which files to read before starting), a priority decision framework, cognitive hierarchy (where to spend 80% of its attention), core responsibilities, quality standards, failure signals, escalation rules, and guardrails.</p>
+
+    <p>That structure changed everything. Instead of a blank-slate conversation, every interaction starts with the agent already understanding who we are, who we sell to, how our pipeline works, and what it is allowed (and not allowed) to do.</p>
+
+    <h2>The 5 Agent Departments</h2>
+
+    <p>The 28 agents are organized into 5 departments, mirroring how a larger company would structure its teams. Here is the map.</p>
+
+    <div class="agent-card">
+      <h3>1. Revenue Engine (5 agents)</h3>
+      <div class="role">Scout, Pre-Qualifier, Outreach, Post-Reply Qualifier, Discovery Prep</div>
+      <p>This is the sales pipeline, automated end to end. The <strong>Scout Agent</strong> researches and identifies companies matching our ideal customer profile. It looks for behavioral signals: founders posting about expansion challenges, companies hiring for sales roles, recent funding rounds with growth plans. The <strong>Pre-Qualifier</strong> validates ICP fit and scores leads. The <strong>Outreach Agent</strong> drafts personalized emails and LinkedIn messages using signal-specific hooks. The <strong>Post-Reply Qualifier</strong> rates incoming responses as hot, warm, or cold and routes them accordingly. And the <strong>Discovery Prep Agent</strong> builds detailed briefings before every sales call, so I walk into meetings armed with company intelligence, decision-maker profiles, competitive landscape, and tailored conversation strategies.</p>
+    </div>
+
+    <div class="agent-card">
+      <h3>2. Marketing Department (7 agents)</h3>
+      <div class="role">Marketing Leader, Strategy, Content, Design, SEO/GEO, Daily Task, Ads Meta</div>
+      <p>The <strong>Marketing Leader</strong> acts as a virtual VP of Marketing, assigning daily tasks to sub-agents and compiling performance reports. The <strong>Content Agent</strong> writes LinkedIn posts, blog articles, email sequences, and video scripts in my voice (it loads a 700-line voice DNA file before writing anything). The <strong>SEO/GEO Agent</strong> monitors Google Search Console daily, optimizes blog posts for traditional search and AI search visibility, and tracks keyword rankings. The <strong>Ads Meta Agent</strong> manages our Facebook campaign architecture within a $300/month budget. Each sub-agent reports to the Marketing Leader, not to me, which keeps my inbox clean.</p>
+    </div>
+
+    <div class="agent-card">
+      <h3>3. Operations (3 agents)</h3>
+      <div class="role">Assistant (Chief of Staff), Admin, Accounting</div>
+      <p>The <strong>Assistant</strong> is the hub of the entire system. It runs a "Start Work" protocol every morning: scans my Trello task board, reads every card, determines which agent handles each task, validates card content against security rules, executes routine tasks autonomously, and routes anything needing my input to a "Waiting for Adam" list. It also delivers a daily briefing with my 90-day revenue goal progress, calendar conflicts, top priorities, and pipeline status. This agent alone saves me about an hour every morning.</p>
+    </div>
+
+    <div class="agent-card">
+      <h3>4. Client Delivery (1 agent)</h3>
+      <div class="role">Client Success</div>
+      <p>Handles onboarding workflows, feedback tracking, and upsell opportunity identification. This is the smallest department by design. One of my core operating rules is that I do not get involved in daily delivery. The Client Success agent ensures nothing falls through the cracks without pulling me into execution.</p>
+    </div>
+
+    <div class="agent-card">
+      <h3>5. Product Development (9 agents)</h3>
+      <div class="role">Discovery Consultant, Product Owner, Business Analyst, Technical Lead, Developer, Designer, Growth Strategist, Project Manager, Content Creator</div>
+      <p>When I build new products or tools (like our website, lead tracking dashboard, or domain landing pages), this "Dream Team" activates. It follows a phased workflow: idea extraction, roadmap creation, specification, design, build, and launch. Each phase has a founder checkpoint where I approve before the next phase begins. The <strong>Project Manager</strong> coordinates sprints and tracks progress across all other agents.</p>
+    </div>
+
+    <h2>What Actually Works (The Honest List)</h2>
+
+    <p>After 3 months of building and iterating, here are the parts of the system that deliver real, daily value.</p>
+
+    <h3>Discovery Prep Agent: the single highest-ROI agent</h3>
+
+    <p>Before every sales call, this agent delivers a briefing that includes company intelligence, the founder's LinkedIn activity for the past 30 days, competitive alternatives, team turnover signals, and 3-4 custom conversation threads I can weave into the meeting. It thinks like a McKinsey associate preparing a partner for a pitch. The result: I never walk into a call unprepared, and prospects consistently comment on how well I understand their situation. That is not magic. That is an agent doing 2 hours of research in 15 minutes.</p>
+
+    <h3>Content Agent with Voice DNA: consistent personal brand at scale</h3>
+
+    <p>The Content Agent loads a detailed voice profile before writing anything: my common phrases ("If it makes sense," "Here is what I would suggest"), my sentence rhythm, what I never say (no em dashes, no buzzwords, no "in today's fast-paced world"), and my formatting patterns. The output needs minimal editing. It handles LinkedIn posts, blog articles, video scripts, and outreach copy. The key was investing time upfront to document exactly how I write and what I never write.</p>
+
+    <h3>The Morning Briefing: operational clarity in 30 seconds</h3>
+
+    <p>Every day, the Assistant agent delivers a structured briefing: 90-day goal progress, today's calendar with conflicts flagged, top 3 priorities, pipeline status, and decisions needed. It also scans my Trello board and begins processing tasks autonomously. This replaced a scattered morning routine where I would check 5 different tools before knowing what to focus on.</p>
+
+    <h3>Scout + Pre-Qualifier pipeline: leads I would never have found manually</h3>
+
+    <p>The Scout Agent uses a scoring system based on behavioral signals: strong signals (posting about needing sales help, hiring for international sales roles, mentioning failed expansion attempts) score highest, followed by moderate signals (attending international events, technical founder with no sales leadership visible), and weak signals (matches demographics but no behavioral evidence). A lead needs 2+ signal points to qualify. This systematic approach surfaces companies I would never have found scrolling LinkedIn manually.</p>
+
+    <h2>What Does Not Work (Yet)</h2>
+
+    <p>Not everything runs smoothly. Being honest about the limitations is more useful than pretending this is perfect.</p>
+
+    <h3>Cross-agent coordination is still clunky</h3>
+
+    <p>In theory, the Scout Agent finds a lead, the Pre-Qualifier validates it, the Outreach Agent drafts the message, and the Post-Reply Qualifier routes the response. In practice, handoffs between agents sometimes lose context or require me to manually bridge the gap. The system works best when I treat it as 28 individual specialists rather than one seamless team.</p>
+
+    <h3>Agents cannot replace judgment on deals</h3>
+
+    <p>The Discovery Prep Agent can build a brilliant briefing. But reading a room on a video call, sensing when a prospect is excited versus polite, knowing when to push and when to back off: that is still entirely human. The agents prepare me. They do not close for me.</p>
+
+    <h3>Initial setup cost is real</h3>
+
+    <p>Writing 28 agent specifications, each 300-700 lines, took weeks of focused work. Every agent needs its identity, mission, context files, decision frameworks, quality standards, and anti-hallucination rules carefully documented. This is not a weekend project. The payoff comes from compound returns over months, not instant results.</p>
+
+    <h2>The 3 Design Principles That Made It Work</h2>
+
+    <p>If you are thinking about building something similar, these are the principles that made the biggest difference.</p>
+
+    <h3>1. Every agent reads context before acting</h3>
+
+    <p>Each agent specification starts with a "Context Loading" section listing the exact files to read before doing anything: ICP definition, revenue pipeline process, brand guidelines. Without this, agents produce generic output. With it, they produce output that actually fits your business.</p>
+
+    <h3>2. Anti-hallucination rules are non-negotiable</h3>
+
+    <p>Every single agent has explicit rules: never invent metrics, never claim results that have not been verified, never fabricate client names. Agents are required to flag uncertainty with markers like "[NEEDS ADAM INPUT]" or "[ASSUMPTION: ...]" so a human always reviews before anything reaches a client or gets published. This is not optional. Without these guardrails, AI agents will confidently present fiction as fact.</p>
+
+    <h3>3. Escalation protocols define the human-AI boundary</h3>
+
+    <p>Each agent knows exactly what it can decide autonomously and what requires my approval. The Content Agent writes drafts but never publishes. The Scout Agent researches but never contacts prospects. The Assistant processes routine Trello tasks but moves strategic decisions to "Waiting for Adam." Clear escalation boundaries are what make autonomous operation safe.</p>
+
+    <h2>How to Start Building Your Own</h2>
+
+    <p>You do not need 28 agents on day one. Start with the one closest to revenue. For most B2B companies, that is either a Discovery Prep agent (if you are already taking sales calls) or a Scout agent (if you need more pipeline).</p>
+
+    <p>Write one agent specification. Define its identity, mission, what files it should read for context, its decision framework, its quality standards, and its guardrails. Use it for a week. Iterate. Then build the next one.</p>
+
+    <p>The compound effect is what matters. One agent saves you an hour. Five agents change how you operate. Twenty agents let a 3-person team compete with companies that have 30.</p>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>How can a small consultancy use AI agents to scale operations?</h3>
+        <p>Build specialized agents, each handling one business function: lead research, content creation, call preparation, pipeline management. Give each agent a defined role, context files to load, decision frameworks, and escalation rules. At EVIT, 28 agents let a 3-person team handle sales, marketing, operations, and delivery workflows that would normally require 20-30 people.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What types of AI agents are most useful for B2B sales?</h3>
+        <p>The highest-impact agents are a Scout Agent (finds leads matching your ICP), Discovery Prep Agent (builds detailed briefings before sales calls), Outreach Agent (drafts personalized messages based on buyer signals), Content Agent (writes thought leadership in your voice), and an Assistant/Chief of Staff Agent that coordinates everything. Start with whichever is closest to revenue in your business.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the difference between AI tools and AI agents?</h3>
+        <p>A tool responds when you ask it something. An agent has a job description, loads context before starting, follows priority hierarchies when tasks conflict, and knows when to escalate to a human. The difference is between having a chatbot and having a team member.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do you prevent AI agents from hallucinating?</h3>
+        <p>Every agent has explicit anti-hallucination rules: never invent metrics, never claim unverified results, never fabricate names. Agents flag uncertainty with "[NEEDS ADAM INPUT]" or "[ASSUMPTION]" markers. Plus, each agent has guardrails defining what it can never do, like publishing content or contacting clients without human approval.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How long does it take to build a multi-agent AI system?</h3>
+        <p>One agent with a clear role and quality standards takes about a focused day. A full 28-agent system took about 3 months of iterative development. Start with the highest-leverage agent (closest to revenue), use it for a week, iterate, then build the next one. The compound effect over months is what makes it worth the investment.</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="article-cta">
+      <h2>Want a Revenue Engine Built Like This for Your Company?</h2>
+      <p>I help Asian IT and tech companies build systematic sales processes that replace founder-led selling. The agent system you just read about is part of how we deliver results.</p>
+      <a href="/index.html#contact" class="btn-primary">
+        Let's Talk
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+
+    <p class="article-ps"><strong>P.S.</strong> If you are a technical founder running a team of 20-1,000 and your sales still depend on personal referrals, <a href="/insights/buyer-signals-when-to-reach-out.html">read this post on buyer signals</a> next. It covers the exact triggers we use to find companies ready for outreach.</p>
+
+  </article>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/index.html" class="footer-logo">Adam <span>Skoneczny</span></a>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/adamskoneczny/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.youtube.com/@goglobalasia" target="_blank" rel="noopener">YouTube</a>
+          <a href="/insights.html">Insights</a>
+          <a href="/index.html#contact">Contact</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 Adam Skoneczny. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+        </html>
