@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Asian Tech Founders Fail at US/EU Sales (And the 3 Systems That Fix It)</title>
+  <meta name="description" content="Asian IT founders have great products but lose deals to Western competitors. Here's why their sales model fails and the 3 systems that actually work.">
+  <link rel="canonical" href="https://adamskoneczny.com/insights/why-asian-founders-fail-western-sales.html">
+  <meta property="og:title" content="Why Asian Tech Founders Fail at US/EU Sales">
+  <meta property="og:description" content="Why local sales models don't work internationally, and what systems do.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://adamskoneczny.com/insights/why-asian-founders-fail-western-sales.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Asian Tech Founders Fail at US/EU Sales">
+  <meta name="twitter:description" content="Asian IT founders have great products but lose deals to Western competitors. Here's why.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy-900: #0a0f1e; --navy-800: #0f1629; --navy-700: #141d38; --navy-600: #1a2747;
+      --blue-500: #2563eb; --blue-400: #3b82f6; --blue-300: #60a5fa; --blue-200: #93c5fd;
+      --gold-400: #c9a84c; --gold-300: #d4b85c;
+      --white: #ffffff; --gray-100: #f1f5f9; --gray-200: #e2e8f0; --gray-300: #cbd5e1;
+      --gray-400: #94a3b8; --gray-500: #64748b; --gray-600: #475569;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--navy-900); color: var(--gray-200); line-height: 1.7; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.2; color: var(--white); }
+    h1 { font-size: 2.5rem; margin-bottom: 24px; }
+    h2 { font-size: 1.8rem; margin-top: 48px; margin-bottom: 24px; }
+    h3 { font-size: 1.3rem; margin-top: 32px; margin-bottom: 16px; color: var(--blue-300); }
+    a { color: var(--blue-300); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--blue-200); text-decoration: underline; }
+    p { margin-bottom: 16px; }
+    ul, ol { margin-left: 24px; margin-bottom: 16px; }
+    li { margin-bottom: 12px; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    .direct-answer { background: rgba(37, 99, 235, 0.08); border-left: 4px solid var(--blue-400); padding: 20px; margin: 24px 0; border-radius: 4px; }
+    .direct-answer p { margin: 0; }
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(10, 15, 30, 0.92); backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(59, 130, 246, 0.12);
+    }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); }
+    .nav-logo span { background: linear-gradient(135deg, var(--blue-400), var(--gold-400)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--gray-300); transition: color 0.3s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--blue-500); color: var(--white) !important; padding: 10px 24px; border-radius: 8px; font-weight: 600 !important; transition: background 0.3s !important; }
+    .nav-cta:hover { background: var(--blue-400) !important; }
+    .page-header { padding: 140px 0 60px; background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-900) 100%); }
+    .page-header h1 { margin-top: 0; }
+    .page-meta { color: var(--gray-400); font-size: 0.95rem; margin-bottom: 16px; }
+    .article-body { padding: 60px 0; line-height: 1.8; }
+    .article-body p { margin-bottom: 20px; }
+    .faq-section { background: rgba(37, 99, 235, 0.04); padding: 40px; border-radius: 12px; margin: 60px 0; border: 1px solid rgba(37, 99, 235, 0.1); }
+    .faq-item { margin-bottom: 32px; }
+    .faq-question { font-weight: 600; color: var(--blue-300); margin-bottom: 12px; font-size: 1.1rem; }
+    .cta-box { background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(201, 168, 76, 0.1) 100%); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: 12px; padding: 40px; margin: 60px 0; text-align: center; }
+    .cta-box h3 { margin-top: 0; }
+    .footer { background: var(--navy-800); border-top: 1px solid rgba(59, 130, 246, 0.1); padding: 60px 0; margin-top: 80px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .footer-links { display: flex; gap: 32px; list-style: none; flex-wrap: wrap; margin-bottom: 32px; }
+    .footer-links a { color: var(--gray-300); }
+    .footer-bottom { color: var(--gray-500); font-size: 0.9rem; }
+    @media (max-width: 768px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.4rem; }
+      .page-header { padding: 100px 0 40px; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo"><span>A</span></div>
+      <ul class="nav-links">
+        <li><a href="https://adamskoneczny.com">Home</a></li>
+        <li><a href="https://adamskoneczny.com/insights.html">Insights</a></li>
+        <li><a href="https://adamskoneczny.com#contact" class="nav-cta">Work Together</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="page-meta">Insights — April 2026 | Updated April 13, 2026</div>
+      <h1>Why Asian Tech Founders Fail at US/EU Sales (And the 3 Systems That Fix It)</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="article-body">
+
+      <div class="direct-answer">
+        <p><strong>Here's the problem in one sentence:</strong> Asian tech founders have great products but lose deals to competitors because they're using a local, relationship-driven sales model against Western buyers who expect speed, process, and proof. The gap isn't product quality. It's sales model mismatch.</p>
+      </div>
+
+      <p>I've worked with IT companies from Vietnam, Bangladesh, and Sri Lanka who've built world-class software. Their products are solid. Their teams are talented. Yet they consistently lose deals to less-capable Western competitors when they try to enter EU or US markets.</p>
+
+      <p>The reason isn't geography or language. It's that their sales approach is optimized for one market and completely wrong for another.</p>
+
+      <h2>The Three Sales Model Gaps</h2>
+
+      <h3>Gap 1: Relationship-First vs. Process-First</h3>
+
+      <div class="direct-answer">
+        <p>Asian markets (Vietnam, Bangladesh, Japan, Sri Lanka) run on relationship and trust. You close deals through network, reputation, and personal credibility. Western markets run on process and evidence. You close deals by proving you understand their problem, showing clear steps, and demonstrating ROI.</p>
+      </div>
+
+      <p>This is the biggest gap. In Asia, your founder's network gets you deals. A CEO calls someone he knows, builds trust over coffee, and the deal happens. That model breaks in the West.</p>
+
+      <p>Western buyers have 10 competitors pitching them. They don't care who your founder knows. They care about: Do you have a methodology? Can you prove it works? What's the timeline? What if you miss targets?</p>
+
+      <p>When Asian founders try Western sales, they do what worked at home: they try to build personal relationships. They send friendly emails, ask for coffee calls, talk about their company's values and vision. Western buyers ignore these emails. They're looking for a vendor who can solve a specific problem on a specific timeline.</p>
+
+      <h3>Gap 2: Long Cycles vs. Fast Cycles</h3>
+
+      <div class="direct-answer">
+        <p>Asian decision-making is consensus-based and slow. It takes 4-6 meetings, multiple stakeholders, and agreement from several people. Western decision-making is faster. One person decides. Moving from conversation to close happens in 3-6 months, not 9-12.</p>
+      </div>
+
+      <p>When Asian founders meet Western prospects, they expect the long cycle. They plan for patience, slow relationship building, multiple touch-points. Western buyers want answers fast. They expect you to understand their problem after one call, show you can solve it in the next, and close in the third.</p>
+
+      <p>Founders get frustrated: "We're building relationships and they're pushing us to commit." What's actually happening: the buyer is trying to make a decision and you're wasting their time with small talk.</p>
+
+      <h3>Gap 3: Hidden Value vs. Transparent Value</h3>
+
+      <div class="direct-answer">
+        <p>Asian companies often hide their differentiator. You prove value through execution after they hire you. Western companies show you exactly why they're different before you buy, so you know what you're getting.</p>
+      </div>
+
+      <p>Asian founders think: "Show us what you can do first, then we'll commit." Western buyers think: "Show us your methodology first, then we'll decide if we want you involved."</p>
+
+      <p>This is why Asian founders often say: "We won the deal but couldn't close it. They wanted us to reveal our secret process upfront." Western buyers aren't asking for secrets. They're asking for transparency. They need to know they're buying a real solution, not a gamble.</p>
+
+      <h2>The Three Systems That Fix This</h2>
+
+      <h3>System 1: Discovery-First Sales (Replace Relationship-First)</h3>
+
+      <p>Instead of trying to build relationships, build a structured discovery process. This tells Western buyers you understand their business in 90 minutes better than they understand it themselves.</p>
+
+      <p>A discovery call isn't coffee and conversation. It's:</p>
+      <ul>
+        <li>Specific questions about their current state (what they're doing now, what's working, what isn't)</li>
+        <li>Questions about their target state (where they want to be, what success looks like)</li>
+        <li>Questions about gaps (what's stopping them from getting there)</li>
+        <li>Questions about constraints (budget, timeline, team, politics)</li>
+      </ul>
+
+      <p>This process replaces 6 months of coffee calls with one structured conversation. Western buyers respect structure. They see you know how to diagnose problems. They want to hire you because you've already started solving it.</p>
+
+      <h3>System 2: Framework-Based Selling (Replace Implicit Value)</h3>
+
+      <p>Western buyers need to see your framework before they commit. Not your secret sauce. Your visible, teachable, repeatable framework.</p>
+
+      <p>Your framework shows:</p>
+      <ul>
+        <li>What the problem actually is (you've diagnosed it)</li>
+        <li>Why it matters (cost, risk, timeline)</li>
+        <li>How you solve it (your steps, your process, your guarantee)</li>
+        <li>What success looks like (specific metrics, timeline, investment)</li>
+      </ul>
+
+      <p>This is STRAIGHT SPIN or whatever your methodology is called. The point is: it's visible, documented, and repeatable. You're not selling mystery. You're selling transparency.</p>
+
+      <h3>System 3: Guarantee-Based Pricing (Replace Risk Reversal)</h3>
+
+      <p>Asian founders often price by effort: "This will take 6 months, so it costs $X." Western buyers think: "Does this solve my problem? What if you don't?"</p>
+
+      <p>A guarantee says: "We're confident enough in our process that if we don't deliver $50K in qualified pipeline in 90 days, we work for free until we do."</p>
+
+      <p>This flips risk. Western buyers are terrified of hiring someone and wasting budget. A guarantee removes that fear. Now they're not paying for effort. They're paying for outcome.</p>
+
+      <h2>What Happens When You Change the Model</h2>
+
+      <p>Founders who shift from relationship-first to discovery-first, who document and teach their framework, and who move from time-based to guarantee-based pricing suddenly start closing Western deals.</p>
+
+      <p>It's not magic. It's model alignment. You're now selling the way Western markets buy.</p>
+
+      <h2 style="margin-top: 60px;">Common Questions</h2>
+
+      <div class="faq-section">
+        <div class="faq-item">
+          <div class="faq-question">Q: Does this mean I need to abandon how I sell locally?</div>
+          <p>No. Local relationships are still valuable. But you can't rely on them for international deals. Add the structure, framework, and transparency systems on top of your relationship skills. Use both.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: How do I create a "framework" if my value is custom work?</div>
+          <p>Your framework is your process, not your deliverable. Sales framework: diagnosis → planning → execution → measurement. Delivery can be 100% custom, but your sales approach is structured and repeatable.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: What if Western buyers won't talk to me without an NDA?</div>
+          <p>That's not about your model. That's a sales skill question. You're not having the conversation that makes them want to talk. A strong discovery discovery phone call gets you the meeting. A weak email gets NDA requests.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: Can I start with smaller deals to learn the Western market?</div>
+          <p>Yes, but be careful. Small deals take the same process time as big deals. Better to start with 3-4 ideal customers who match your ICP exactly, nail the discovery-first system, then scale to bigger markets.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: How long does it take to shift from local to Western sales model?</div>
+          <p>Mindset shift: 2-4 weeks. Building your discovery process and framework: 4-6 weeks. Closing your first deal using the new system: 8-12 weeks. So roughly 90 days to see proof-of-concept.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: What if I don't have a guarantee I'm confident about?</div>
+          <p>Start with what you can guarantee. Maybe it's not "$50K pipeline" yet. Maybe it's "a qualified list of 20 prospects in 30 days" or "a documented go-to-market strategy." Build certainty, then expand the guarantee.</p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h3>Ready to Close Western Deals?</h3>
+        <p>The founders winning in EU/US markets aren't smarter. They're using the right sales model for the market. If you're ready to shift from relationship-first to discovery-first, from hidden value to transparent frameworks, let's talk.</p>
+        <p><a href="https://adamskoneczny.com#contact" style="color: var(--blue-300); font-weight: 600;">Start a discovery call →</a></p>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: var(--gray-400);"><strong>P.S.</strong> I work with Asian IT and tech companies entering EU/US markets. If you've built a solid product but keep losing deals to Western competitors, that's a sales model problem, not a product problem. Let's diagnose exactly where the gap is.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="https://adamskoneczny.com">Home</a></li>
+        <li><a href="https://adamskoneczny.com/insights.html">Insights</a></li>
+        <li><a href="https://linkedin.com/in/adamskoneczny">LinkedIn</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p>© 2026 Adam Skoneczny. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Why Asian Tech Founders Fail at US/EU Sales (And the 3 Systems That Fix It)",
+    "description": "Asian IT founders have great products but lose deals to Western competitors. Here's why their sales model fails and the 3 systems that actually work.",
+    "image": "https://adamskoneczny.com/og-image.png",
+    "datePublished": "2026-04-13",
+    "dateModified": "2026-04-13",
+    "author": {
+      "@type": "Person",
+      "name": "Adam Skoneczny",
+      "url": "https://adamskoneczny.com",
+      "sameAs": ["https://linkedin.com/in/adamskoneczny"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Adam Skoneczny",
+      "url": "https://adamskoneczny.com"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does this mean I need to abandon how I sell locally?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Local relationships are still valuable. But you can't rely on them for international deals. Add the structure, framework, and transparency systems on top of your relationship skills. Use both."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I create a 'framework' if my value is custom work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your framework is your process, not your deliverable. Sales framework: diagnosis → planning → execution → measurement. Delivery can be 100% custom, but your sales approach is structured and repeatable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if Western buyers won't talk to me without an NDA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "That's not about your model. That's a sales skill question. You're not having the conversation that makes them want to talk. A strong discovery phone call gets you the meeting. A weak email gets NDA requests."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I start with smaller deals to learn the Western market?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but be careful. Small deals take the same process time as big deals. Better to start with 3-4 ideal customers who match your ICP exactly, nail the discovery-first system, then scale to bigger markets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to shift from local to Western sales model?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mindset shift: 2-4 weeks. Building your discovery process and framework: 4-6 weeks. Closing your first deal using the new system: 8-12 weeks. So roughly 90 days to see proof-of-concept."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I don't have a guarantee I'm confident about?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with what you can guarantee. Maybe it's not $50K pipeline yet. Maybe it's a qualified list of 20 prospects in 30 days or a documented go-to-market strategy. Build certainty, then expand the guarantee."
+        }
+      }
+    ]
+  }
+  </script>
+
+</body>
+</html>
